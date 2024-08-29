@@ -9,6 +9,14 @@
     <ul></ul>
 
     <script>
+      const bil = {
+        brand: "BMW",
+        model: "M3",
+        drivmiddel: "Diesel",
+        lak: "blank sort",
+        passagere: ["Peter", "Alan", "Mor"],
+      };
+
       const liste = document.querySelector("ul");
 
       const frugter = ["banan", "æbler", "citron"];
@@ -17,6 +25,7 @@
 
       function putListe(element) {
         console.log(element);
+        liste.innerHTML += "<li>" + element + "</li>";
       }
     </script>
   </body>

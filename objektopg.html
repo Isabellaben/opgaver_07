@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABBA</title>
+  </head>
+  <body>
+    <article>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/c/cb/ABBA_-_TopPop_1974_5.png"
+        alt="abba"
+      />
+      <h1>navn</h1>
+      <h2>oprindelse</h2>
+      <div>medlemmer</div>
+    </article>
+
+    <script>
+      const band = {
+        navn: "ABBA",
+        oprindelse: "1972",
+        medlemmer: ["Agnetha", " Björn", " Benny", " Anni-Frid"],
+        billede: "Et billede af abba",
+      };
+
+      /*   const abba = document.querySelector("#abba");
+      abba.querySelector("h1").textContent = band.navn;
+      abba.querySelector("h2").textContent = band.oprindelse;
+      abba.querySelector("div").textContent = band.medlemmer;
+      band.querySelector("img").src = band.billede; */
+
+      const artikel = document.querySelector("article");
+
+      console.log(artikel);
+
+      artikel.querySelector("h1").textContent = band.navn;
+      artikel.querySelector("h2").textContent = band.oprindelse;
+      artikel.querySelector("div").textContent = band.medlemmer;
+    </script>
+  </body>
+</html>
