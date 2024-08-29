@@ -5,21 +5,22 @@ const fanta = document.querySelector("#fanta");
 
 
 
-snaps.addEventListener("click", indeholderAlkohol);
-beer.addEventListener("click", indeholderAlkohol); 
+snaps.addEventListener("click", tjek);
+beer.addEventListener("click", tjek); 
+cola.addEventListener("click", tjek);
+fanta.addEventListener("click", tjek);
 
 
-function indeholderAlkohol(){
-    console.log("Inderholder alkohol");
+function tjek(){
+    console.log(this.alt);
+    if(this.alt == beer || this.alt == snaps){
+        console.log("Indeholder alkohol");
+    } else {
+        console.log("Alkoholfri");
+    }
 }
 
 
-cola.addEventListener("click", alkoholfri);
-fanta.addEventListener("click", alkoholfri);
-
-function alkoholfri(){
-    console.log("Alkoholfri");
-}  
 
 
 
