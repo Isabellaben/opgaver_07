@@ -1,0 +1,18 @@
+.billeder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+img{
+    height: 250px;
+    margin-top: 2em;
+    border-style: dotted;
+    border-color: red;
+    cursor: pointer; 
+}
+ 
+#cola{
+ 
+    padding-left: 80px;
+    padding-right: 92px;
+}
