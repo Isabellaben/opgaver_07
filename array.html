@@ -3,21 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frugt</title>
+    <title>Frugt/biler</title>
+    <style>
+      img {
+        max-width: 300px;
+      }
+    </style>
   </head>
   <body>
-    <ul></ul>
-
+    <template>
+      <article>
+        <h1>brand</h1>
+        <h2>model</h2>
+        <h3>drivmiddel</h3>
+        <h4>lak</h4>
+        <div>udstyr</div>
+      </article>
+    </template>
+    <!--     <ul></ul> -->
+    <section id="bilListe"></section>
     <script>
-      const bil = {
-        brand: "BMW",
-        model: "M3",
-        drivmiddel: "Diesel",
-        lak: "blank sort",
-        passagere: ["Peter", "Alan", "Mor"],
-      };
+      const biler = [
+        {
+          brand: "BMW",
+          model: "M3",
+          drivmiddel: "Diesel",
+          lak: "blank sort",
+          udstyr: [" AC", " alufælge", " soltag"],
+          billede: "Et billede af bilen",
+        },
+        {
+          brand: "VW",
+          model: "i4",
+          drivmiddel: "El",
+          lak: "blank hvid",
+          udstyr: ["ac", " uufartpilot"],
+        },
 
-      const liste = document.querySelector("ul");
+        {
+          brand: "Volvo",
+          model: "amazon",
+          drivmiddel: "benzin",
+          lak: "mat grå",
+          udstyr: [" ac", " servo", " barnesæde"],
+        },
+      ];
+
+      const skabelon = document.querySelector("template").content;
+      const bilListe = document.querySelector("#bilListe");
+
+      biler.forEach(visBil);
+
+      function visBil(bil) {
+        console.log(bil);
+        const kopi = skabelon.cloneNode(true);
+        kopi.querySelector("h2").textContent = bil.model;
+        kopi.querySelector("h1").textContent = bil.brand;
+        kopi.querySelector("h3").textContent = bil.drivmiddel;
+        kopi.querySelector("h4").textContent = bil.lak;
+        kopi.querySelector("div").textContent = bil.udstyr;
+        /*         kopi.querySelector("img").scr = "billeder/" + bil.billede; */
+        bilListe.appendChild(kopi);
+      }
+
+      /*  const liste = document.querySelector("ul");
 
       const frugter = ["banan", "æbler", "citron"];
 
@@ -26,7 +75,7 @@
       function putListe(element) {
         console.log(element);
         liste.innerHTML += "<li>" + element + "</li>";
-      }
+      } */
     </script>
   </body>
 </html>
