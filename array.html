@@ -13,6 +13,7 @@
   <body>
     <template>
       <article>
+        <img src="" alt="" />
         <h1>brand</h1>
         <h2>model</h2>
         <h3>drivmiddel</h3>
@@ -30,14 +31,14 @@
           drivmiddel: "Diesel",
           lak: "blank sort",
           udstyr: [" AC", " alufælge", " soltag"],
-          billede: "Et billede af bilen",
+          billede: "bil1.jpg",
         },
         {
           brand: "VW",
           model: "i4",
           drivmiddel: "El",
           lak: "blank hvid",
-          udstyr: ["ac", " uufartpilot"],
+          udstyr: ["ac", " fartpilot"],
         },
 
         {
@@ -57,12 +58,14 @@
       function visBil(bil) {
         console.log(bil);
         const kopi = skabelon.cloneNode(true);
-        kopi.querySelector("h2").textContent = bil.model;
         kopi.querySelector("h1").textContent = bil.brand;
+        kopi.querySelector("h2").textContent = bil.model;
         kopi.querySelector("h3").textContent = bil.drivmiddel;
         kopi.querySelector("h4").textContent = bil.lak;
         kopi.querySelector("div").textContent = bil.udstyr;
-        /*         kopi.querySelector("img").scr = "billeder/" + bil.billede; */
+
+        kopi.querySelector("img").scr = "img/" + bil.billede;
+
         bilListe.appendChild(kopi);
       }
 
