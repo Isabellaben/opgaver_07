@@ -1,0 +1,59 @@
+p{
+    background-color: rgb(233, 197, 242);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-color: rgb(52, 10, 65);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.grid01{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.box-1{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: subgrid ;
+    background-color: rgb(144, 52, 164);
+    }
+
+/******** opgave 2 *************/
+
+.grid02{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.box{
+    display: grid;
+    background-color: antiquewhite;
+    padding: 10px;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+}
+
+/******* opgave 3 **********/
+.grid03{
+    display: grid;
+    grid-template-columns: repeat(2, auto 1fr);
+    gap: 1rem;
+}
+
+.box01{
+    grid-row: span 2;
+}
+
+.box-5{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2 / span 3;
+    background-color: aqua;
+    padding: 10px;
+    gap: inherit;
+}
