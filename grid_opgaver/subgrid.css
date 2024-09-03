@@ -57,3 +57,56 @@ p{
     padding: 10px;
     gap: inherit;
 }
+
+/********* Opgave 4 *********/
+.grid04{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: rgb(184, 145, 220);
+}
+
+.box2, .box2b{
+    background-color: rgb(141, 96, 183);
+    padding: 1rem;
+    grid-column: 2/span 4;
+    gap: inherit;
+    grid-template-columns: subgrid;
+}
+
+/******** opgave 5 *******/
+.grid05{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    background-color: rgb(228, 169, 246);
+}
+
+.grid05 div{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+/****** opgave 6 *********/
+
+.grid06{
+    display: grid;
+    grid-template-columns: [a] 1fr [b] 1fr [c] 1fr [d] 1fr;
+    gap: 1rem;
+}
+
+.baggrund{
+    background-color: rgb(186, 144, 225);
+    grid-column: 2 / -1;
+    display: grid;
+    grid: auto / subgrid;
+}
+
+.box-01{
+    grid-column: c;
+}
+
+.box-02{
+    grid-column: c;
+}

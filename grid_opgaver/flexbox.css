@@ -1,0 +1,79 @@
+.container1{
+    display: flex;
+    gap: 1rem;
+}
+
+p{
+    background-color: rgb(154, 236, 247);
+    border-style: solid;
+    border-color: rgb(21, 17, 90);
+    border-width: 2px;
+}
+
+/******* opgave 2 *********/
+
+.container2{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.container2b{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.container2c{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.container2d{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.container2e{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+/********* opgave 3 **********/
+.container3{
+    display: flex;
+    gap: 1rem;
+}
+
+.logo{
+    font-size: 25px;
+    margin-right: auto;
+
+}
+
+/********* opgave 4 *********/
+.container4{
+    display: flex;
+    flex-direction: column;
+}
+
+/******* opgave 5 *******/
+
+.container5{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/******** opgave 6 *********/
+
+.container6{
+    display: flex;
+    min-height: 180px;
+}
+
+.box-1{
+    flex-grow: 2;
+}
